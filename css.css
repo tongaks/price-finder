@@ -1,0 +1,80 @@
+:root {
+	--cream-green: #B0DB9C;
+	--pastel-dim-green: #A5B68D;
+}
+
+@font-face {
+	font-family: sfpr-reg;
+	src: url(fonts/SFPRODISPLAYREGULAR.OTF);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sfpr-reg;
+	text-decoration: none;
+}
+
+body {
+	height: 100vh;
+	position: relative;
+}
+
+.navbar {
+	user-select: none;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 10px;
+
+	background: var(--cream-green);
+}
+
+.navbar .links {
+	display: flex;
+	width: 30%;
+	cursor: pointer;
+
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+}
+
+main {
+	padding-top: 10%;
+	height: 100%;
+	width: 100%;
+	background: whitesmoke;
+}
+
+.hero {
+	margin: auto;
+	padding: 20px;
+	border-radius: 20px;
+	text-align: center;
+	align-items: center;
+	width: fit-content;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, .5);
+}
+
+.search-bar {
+	display: flex;
+}
+
+.search-bar * {
+	margin: 4px;
+	font-size: 2rem;
+}
+
+#product-in {
+	padding: 4px;
+	border-radius: 10px;
+	width: 100%;
+}
+
+#search-btn {
+	border-radius: 5px;
+	padding: 10px;
+	cursor: pointer;
+
+	background: var(--pastel-dim-green);
+}
