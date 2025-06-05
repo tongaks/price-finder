@@ -32,7 +32,7 @@
 
 		<form class="search-bar" action="find-price/find-price.php" method="POST">
 			<input type="text" id="product-in" name="product-name" placeholder="Search any product">
-			<input type="submit" name="submit" class="button" id="search-btn" value="Search">
+			<input type="submit" name="submit" class="button" id="search-btn">Search</input>
 		</form>
 	</div>
 </main>
@@ -41,6 +41,5 @@
 	<div class="about"></div>
 </footer>
 
-<script src="index.js"></script>
 </body>
 </html>

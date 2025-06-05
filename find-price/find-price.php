@@ -1,9 +1,18 @@
+<?php 
+
+if (!isset($_POST['submit'])) {
+	header('Location: http://localhost/price-finder');
+	die();
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../css.css"> -->
 	<title>Price finder</title>
 </head>
 <body>
@@ -18,6 +27,17 @@
 </div>
 
 <main>
+	<div class="result">
+		<?php
+			$url = "https://puregold.com.ph/index.php/pgcatalog/product/view/category/SNACKS/subcategory/CHIPS,%20NUTS%20&%20CORN/title/PRINGLES%20POTATO%20CRISP%20ORIGINAL%2042G%20/barcode/8886467100260";
+			
+			$command = "./scrape-prices " . escapeshellarg($url);
+
+			$output = shell_exec($command . " 2>&1");
+			echo $output;
+		?>
+	</div>
+
 	<div class="hero">
 		<div class="intro">
 			<h1>Search any product for its price</h1>
@@ -32,7 +52,7 @@
 
 		<form class="search-bar" action="find-price/find-price.php" method="POST">
 			<input type="text" id="product-in" name="product-name" placeholder="Search any product">
-			<input type="submit" name="submit" class="button" id="search-btn" value="Search">
+			<input type="submit" name="submit" class="button" id="search-btn">Search</input>
 		</form>
 	</div>
 </main>
@@ -41,6 +61,5 @@
 	<div class="about"></div>
 </footer>
 
-<script src="index.js"></script>
 </body>
 </html>

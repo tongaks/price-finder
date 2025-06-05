@@ -8,13 +8,13 @@ size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
     std::string* response = static_cast<std::string*>(userp);
     response->append(static_cast<char*>(contents), totalSize);
     return totalSize;
-}
+} 
 
 int main(int argc, char const *argv[]) {
-	std::string url = "https://puregold.com.ph/index.php/pgcatalog/product/view/category/SNACKS/subcategory/CHIPS,%20NUTS%20&%20CORN/title/PRINGLES%20POTATO%20CRISP%20ORIGINAL%2042G%20/barcode/8886467100260";
 
-	// std::cout << "Enter url: ";
-	// std::cin >> url;
+	if (argc < 1) return -1;
+
+	std::string url = argv[1];
 
 	curl_global_init(CURL_GLOBAL_DEFAULT);
 
@@ -43,9 +43,7 @@ int main(int argc, char const *argv[]) {
 	curl_easy_cleanup(handler);
 
 	std::vector<std::string> prices = getPrices(response);
-	for (std::string s : prices) {
-		std::cout << "price: " << s << '\n';
-	}
+	std::cout << prices[0] << '\n';
 
 	return 0;
 }
