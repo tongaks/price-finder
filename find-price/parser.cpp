@@ -47,28 +47,53 @@
 // 	return prices;
 // }
 
+// std::string getImageSrc1(std::string html, std::string p_name) {
+
+// 	std::string upper = "";
+// 	for (char c : p_name) upper += std::toupper(c);
+
+
+// 	if (html.find("<img src=") != std::string::npos) {
+// 		if (html.find("pgmobile") == std::string::npos) return "";
+
+// 		for (int i = 0; i < html.length(); i++) {
+// 			std::string temp = "";
+
+// 			if (html[i] == 's' && html[i+1] == 'r' && html[i+2] == 'c') {
+// 				for (int d = i+4; d < html.length(); d++) {
+// 					if (html[d] != '"') {
+// 						temp += html[d];
+// 					} else if (html[d] == '"' && html[d+1] == ' ') {
+// 						std::cout << "temp: " << temp << '\n'
+// 						return temp;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	return "";
+// }
+
+
 std::vector<std::string> getImageSrc(std::string html) {
 	std::vector<std::string> images;
 
 	if (html.find("<img src=") != std::string::npos) {
 		for (int i = 0; i < html.length(); i++) {
+			std::string temp;
 
 			if (html[i] == 's' && html[i+1] == 'r' && html[i+2] == 'c') {
-				std::string temp;
-				int pos = -1;
-
-				for (int d = i+5; d < html.length(); d++) {
-
-					if (html[d] == '"' && html[d+1] == ' '){
+				for (int d = i+4; d < html.length(); d++) {
+					if (html[d] != '\"') {
+						temp += html[d];
+					} else if (html[d] == '\"' && html[d+1] == ' ') {
 						images.push_back(temp);
-						break;
-					} else temp += html[d];
+					}
 				}
-
 			}
-
 		}
-	}
+	} else return {};
 
 	return images;
 }
@@ -112,9 +137,11 @@ int main(int argc, char const *argv[]) {
 	// }
 
 	// for image
+	// std::vector<std::vector<std::string>> image;
+
 	std::vector<std::vector<std::string>> image;
 	while (std::getline(file, line)) {
-		std::vector<std::string> res = getImageSrc(line);
+		std::vector<std::string> res = getPrices(line);
 		if (!res.empty()) image.push_back(res);
 	}
 
@@ -123,6 +150,7 @@ int main(int argc, char const *argv[]) {
 			std::cout << d << '\n';
 		}
 	}
+
 
 	return 0;
 }

@@ -35,24 +35,43 @@ int main(int argc, char const *argv[]) {
 		if (res != CURLE_OK) {
 			std::cout << "res: " << res << '\n';
 			std::cerr << "Error on curl" << '\n'; 
+			return -1;
 		}
+
 	} else {
 		fprintf(stderr, "Error on handler\n");
+		return -1;
 	}
-
-
-	curl_easy_cleanup(handler);
-	// std::cout << response << '\n';
-
 
 	std::istringstream new_response(response);
-	std::string line;
+	std::string img_line;
 
-	while (std::getline(new_response, line)) {
-		// std::vector<std::string> prices = getImageSrc(line);
-		// std::cout << prices[0] << '\n';
+	std::vector<std::vector<std::string>> images;
+	while (std::getline(new_response, img_line)) {
+		std::vector<std::string> out = getImageSrc(img_line, "PIKNIK");
+		if (!out.empty()) images.push_back(out);
 	}
 
+	std::istringstream new_response_pr(response);
+	std::string price_line;
+
+	std::vector<std::vector<std::string>> prices;
+	while (std::getline(new_response_pr, price_line)) {
+		std::vector<std::string> out = getPrices(price_line);
+		if (!out.empty()) prices.push_back(out);
+	}
+
+	std::cout << images[0][0] << '\n';
+
+	for (std::vector<std::string> v : prices) {
+		for (std::string s : v) {
+			std::cout << s << '\n';
+		}
+	}
+
+	// std::cout << prices[0][0] << '\n';
+
+	curl_easy_cleanup(handler);
 
 	return 0;
 }
