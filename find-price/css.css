@@ -41,13 +41,14 @@ body {
 }
 
 main {
-	padding-top: 10%;
 	height: 100%;
 	width: 100%;
+	display: flex;
 	background: whitesmoke;
 }
 
 .hero {
+	padding-top: 10%;
 	margin: auto;
 	padding: 20px;
 	border-radius: 20px;

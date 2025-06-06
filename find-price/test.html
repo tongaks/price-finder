@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nonexistent Image Gallery with Prices</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      margin-top: 40px;
+      color: #333;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 15px;
+      width: 220px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border: 2px dashed #aaa;
+      background-color: #eee;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #009688;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nonexistent Image Gallery</h1>
+  <p>All these images are fake, but the prices are real... maybe.</p>
+  <div class="gallery">
+    <div class="item">
+      <img src="images/ghost_picture_001.jpg" alt="Missing ghost image">
+      <span class="price">$19.99</span>
+    </div>
+    <div class="item">
+      <img src="assets/magic_lantern_404.gif" alt="Missing lantern image">
+      <span class="price">$24.50</span>
+    </div>
+    <div class="item">
+      <img src="media/fantasy/missing_dragon.png" alt="Missing dragon image">
+      <span class="price">$42.00</span>
+    </div>
+    <div class="item">
+      <img src="uploads/old_wizard_photo.jpeg" alt="Missing wizard image">
+      <span class="price">$15.75</span>
+    </div>
+    <div class="item">
+      <img src="pics/lost_scroll_final_final_v3.bmp" alt="Missing scroll image">
+      <span class="price">$9.99</span>
+    </div>
+  </div>
+</body>
+</html>

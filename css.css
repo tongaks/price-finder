@@ -41,16 +41,17 @@ body {
 }
 
 main {
-	padding-top: 10%;
 	height: 100%;
 	width: 100%;
+	justify-items: center;	
 	background: whitesmoke;
+	padding-top: 10%;
 }
 
 .hero {
-	margin: auto;
-	padding: 20px;
+	padding: 30px;
 	border-radius: 20px;
+
 	text-align: center;
 	align-items: center;
 	width: fit-content;

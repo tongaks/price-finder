@@ -1,6 +1,7 @@
 #include <iostream>
 #include <curl/curl.h>
 #include <string>
+#include <sstream>
 #include "getPrice.h"
 
 size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
@@ -41,9 +42,17 @@ int main(int argc, char const *argv[]) {
 
 
 	curl_easy_cleanup(handler);
+	// std::cout << response << '\n';
 
-	std::vector<std::string> prices = getPrices(response);
-	std::cout << prices[0] << '\n';
+
+	std::istringstream new_response(response);
+	std::string line;
+
+	while (std::getline(new_response, line)) {
+		// std::vector<std::string> prices = getImageSrc(line);
+		// std::cout << prices[0] << '\n';
+	}
+
 
 	return 0;
 }

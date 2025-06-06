@@ -3,39 +3,41 @@
 #include <string>
 #include <fstream>
 
+std::vector<std::string> getImageSrc(std::string html) {
+	std::vector<std::string> images;
 
-// disgusting-looking code to scrape the price
+	if (html.find("<img src=") != std::string::npos) {
+		for (int i = 0; i < html.length(); i++) {
+			std::string temp;
+
+			if (html[i] == 's' && html[i+1] == 'r' && html[i+2] == 'c') {
+				for (int d = i+4; d < html.length(); d++) {
+					if (html[d] != '\"') {
+						temp += html[d];
+					} else if (html[d] == '\"' && html[d+1] == ' ') {
+						images.push_back(temp);
+					}
+				}
+			}
+		}
+	}
+
+	return images;
+}
+
 std::vector<std::string> getPrices(std::string html) {
 	std::vector<std::string> prices;
 
-	for (int i = 0; i < html.length(); i++) {
+	if (html.find("<span class=\"price\"") != std::string::npos) {
+		std::string temp;
 
-		if (html[i] == '<') {
-			std::string temp;
+		for (int i = 0; i < html.length(); i++) {
+			if (html[i] == '>') {
+				std::string temp;
 
-			for (int d = i; d < html.length(); d++) {
-				if (html[d] == '<' && html[d+1] == '/') {
-					// temp += html[d];
-
-					if (temp.find("span") != std::string::npos) {
-						if (temp.find("class=\"price\"") != std::string::npos) {
-							int pos = -1;
-
-							for (int g = 0; g < temp.length(); g++) {
-								if (temp[g] == '>') {
-									pos = g;
-								}
-							}
-
-							temp = temp.substr(pos+1, temp.length());
-							prices.push_back(temp);
-						}
-
-					}
-
-					break;
-				} else {
-					temp += html[d];
+				for (int d = i+1; d < html.length(); d++) {
+					if (html[d] != '<') temp += html[d];
+					else prices.push_back(temp);
 				}
 
 			}
