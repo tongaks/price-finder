@@ -61,13 +61,9 @@ int main(int argc, char const *argv[]) {
 		if (!out.empty()) prices.push_back(out);
 	}
 
-	std::cout << images[0][0] << '\n';
+	std::cout << images[0][0] << "!";
+	std::cout << prices[0][0] << '\n';
 
-	for (std::vector<std::string> v : prices) {
-		for (std::string s : v) {
-			std::cout << s << '\n';
-		}
-	}
 
 	// std::cout << prices[0][0] << '\n';
 

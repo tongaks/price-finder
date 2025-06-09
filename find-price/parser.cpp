@@ -139,13 +139,14 @@ int main(int argc, char const *argv[]) {
 	// for image
 	// std::vector<std::vector<std::string>> image;
 
-	std::vector<std::vector<std::string>> image;
+	std::vector<std::vector<std::string>> info;
 	while (std::getline(file, line)) {
-		std::vector<std::string> res = getPrices(line);
-		if (!res.empty()) image.push_back(res);
+		// std::vector<std::string> res = getPrices(line);
+		std::vector<std::string> res = getImageSrc(line);
+		if (!res.empty()) info.push_back(res);
 	}
 
-	for (std::vector<std::string> s : image) {
+	for (std::vector<std::string> s : info) {
 		for (std::string d : s) {
 			std::cout << d << '\n';
 		}

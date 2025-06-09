@@ -34,7 +34,10 @@ if (!isset($_POST['submit'])) {
 			$command = "./scrape-prices " . escapeshellarg($url);
 
 			$output = shell_exec($command . " 2>&1");
-			echo $output;
+			$infos = explode("!", $output);
+
+			echo "<h1>" . $infos[1] . "</h1>";
+			echo "<img src='" . $infos[0] . "' width='200px'>";
 		?>
 	</div>
 
