@@ -11,26 +11,31 @@ const browser = await puppeteer.launch({
 const page = await browser.newPage();
 
 // get the page
-let url = "https://puregold.com.ph/index.php/pgcatalog/product/view/category/SNACKS/subcategory/CHIPS,%20NUTS%20&%20CORN/title/PIKNIK%20SHOESTRING%20POTATOES%20ORIGINAL%204%20OZ%20/barcode/74923405198";
+let url = "https://puregold.com.ph/pgcatalog/category/subcategory/category/SNACKS/subcat/CHIPS,%20NUTS%20&%20CORN";
 await page.goto(url, {
 	waitUntil: "domcontentloaded"
 });
 
-// scrape the price
-const price = await page.evaluate(()=> {
-    const price_tag = document.querySelector(".price").innerText;
-    return price_tag;
+
+const product_name = await page.evaluate(()=> {
+    const p_name = document.querySelector(".ImageContainer").children[0].innerHTML;
+    return p_name;
 })
 
-const product_img = await page.evaluate(()=> {
-    const img = document.querySelector(".product.media").children[1].src;
-    return img;
+const images = await page.evaluate(()=> {
+    const image = document.querySelector(".ImageContainer").children[0].src;
+    return image;
 })
 
-console.log(price);
-console.log(product_img);
+const prices = await page.evaluate(()=> {
+    const price = document.querySelector(".product-price-style").innerHTML;
+    return price;
+})
 
-return { price, product_img };
+console.log(images);
+console.log(prices);
+
+// return { price, product_img };
 
 };
 

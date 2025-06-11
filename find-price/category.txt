@@ -1,0 +1,44 @@
+<a href="/pgcatalog/category/view/category/BEVERAGES">
+<a href="/pgcatalog/category/view/category/WINES & LIQUORS">
+<a href="/pgcatalog/category/view/category/SNACKS">
+<a href="/pgcatalog/category/view/category/SWEETS">
+<a href="/pgcatalog/category/view/category/MILK & MILK PRODUCTS">
+<a href="/pgcatalog/category/view/category/FORMULA MILK & BABY FOODS">
+<a href="/pgcatalog/category/view/category/CIGARS">
+<a href="/pgcatalog/category/view/category/CONDIMENTS SAUCES & DRESS">
+<a href="/pgcatalog/category/view/category/CANNED GOODS">
+<a href="/pgcatalog/category/view/category/GROCERY STAPLES">
+<a href="/pgcatalog/category/view/category/SEAFOODS">
+<a href="/pgcatalog/category/view/category/FRUITS & VEGETABLES">
+<a href="/pgcatalog/category/view/category/MEAT">
+<a href="/pgcatalog/category/view/category/POULTRY">
+<a href="/pgcatalog/category/view/category/BAKERY">
+<a href="/pgcatalog/category/view/category/RICE & SUGAR">
+<a href="/pgcatalog/category/view/category/DELICATESSEN">
+<a href="/pgcatalog/category/view/category/DAIRY AND DELI">
+<a href="/pgcatalog/category/view/category/BABY CARE">
+<a href="/pgcatalog/category/view/category/HEALTH & BEAUTY CARE">
+<a href="/pgcatalog/category/view/category/HOUSEHOLD MAINTENANCE">
+<a href="/pgcatalog/category/view/category/HEALTH CARE">
+<a href="/pgcatalog/category/view/category/APPLIANCE">
+<a href="/pgcatalog/category/view/category/HARDWARE">
+<a href="/pgcatalog/category/view/category/FURNITURE">
+<a href="/pgcatalog/category/view/category/PLASTICWARE">
+<a href="/pgcatalog/category/view/category/KITCHENWARE">
+<a href="/pgcatalog/category/view/category/GLASSWARE">
+<a href="/pgcatalog/category/view/category/LINEN">
+<a href="/pgcatalog/category/view/category/APPARELS">
+<a href="/pgcatalog/category/view/category/INFANTS">
+<a href="/pgcatalog/category/view/category/FOOTWEAR">
+<a href="/pgcatalog/category/view/category/BAGS & WALLETS">
+<a href="/pgcatalog/category/view/category/FASHION">
+<a href="/pgcatalog/category/view/category/GADGETS">
+<a href="/pgcatalog/category/view/category/TOYS">
+<a href="/pgcatalog/category/view/category/SCHOOL & OFFICE SUPPLIES">
+<li class="footer-link-item"><a href="/faq">FAQs</a></li>
+<li class="footer-link-item"><a href="https://corporate.puregold.com.ph/">Corporate</a></li>
+<li class="footer-link-item-inline"><a href="#"><img src="https://puregold.com.ph/pub/media/fb_logo.png" alt=""></a></li>
+<li class="footer-link-item-inline"><a href="#"><img src="https://puregold.com.ph/pub/media/instagram_logo.png" alt=""></a></li>
+<li class="footer-link-item-inline"><a href="#"><img src="https://puregold.com.ph/pub/media/image-gcash.png" alt=""></a></li>
+<li class="footer-link-item-inline"><a href="#"><img src="https://puregold.com.ph/pub/media/image-paynamics.png" alt=""></a></li>
+<li class="footer-link-item-inline"><a href="#"><img src="https://puregold.com.ph/pub/media/SecurityPlus_Logo_Certified_CE.png" alt=""></a></li>

@@ -4,6 +4,18 @@
 #include <sstream>
 #include "getPrice.h"
 
+size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
+    size_t totalSize = size * nmemb;
+    std::string* response = static_cast<std::string*>(userp);
+    response->append(static_cast<char*>(contents), totalSize);
+
+    if (response.find("<img src='") != std::string::npos) {
+    	std::cout << "found image: " << response << '\n';
+    }
+
+    return totalSize;
+} 
+
 int fetchURL(std::string _url, std::string &content) {
 	std::string url = _url;
 	curl_global_init(CURL_GLOBAL_DEFAULT);
@@ -17,7 +29,6 @@ int fetchURL(std::string _url, std::string &content) {
 	    curl_easy_setopt(handler, CURLOPT_USERAGENT, "libcurl-agent/1.0");
 
         curl_easy_setopt(handler, CURLOPT_WRITEFUNCTION, WriteCallback);
-        curl_easy_setopt(handler, CURLOPT_WRITEDATA, &response);
 
 		res = curl_easy_perform(handler);
 
