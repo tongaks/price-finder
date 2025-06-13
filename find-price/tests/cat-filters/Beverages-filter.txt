@@ -1,0 +1,8 @@
+<a href="/pgcatalog/category/subcategory/category/BEVERAGES/subcat/CHOCOLATE & COCOA DRINKS">
+<a href="/pgcatalog/category/subcategory/category/BEVERAGES/subcat/COFFEE">
+<a href="/pgcatalog/category/subcategory/category/BEVERAGES/subcat/CREAMER">
+<a href="/pgcatalog/category/subcategory/category/BEVERAGES/subcat/ENERGY & SPORTS DRINK">
+<a href="/pgcatalog/category/subcategory/category/BEVERAGES/subcat/JUICES">
+<a href="/pgcatalog/category/subcategory/category/BEVERAGES/subcat/SOFTDRINKS">
+<a href="/pgcatalog/category/subcategory/category/BEVERAGES/subcat/TEA & TEA MIXES">
+<a href="/pgcatalog/category/subcategory/category/BEVERAGES/subcat/WATER">

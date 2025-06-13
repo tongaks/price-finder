@@ -1,0 +1,10 @@
+<a href="/pgcatalog/category/subcategory/category/FURNITURE/subcat/BEDROOM">
+<a href="/pgcatalog/category/subcategory/category/FURNITURE/subcat/CABINET">
+<a href="/pgcatalog/category/subcategory/category/FURNITURE/subcat/DÉCOR">
+<a href="/pgcatalog/category/subcategory/category/FURNITURE/subcat/DINING ROOM">
+<a href="/pgcatalog/category/subcategory/category/FURNITURE/subcat/FURNITURE ACCESSORIES">
+<a href="/pgcatalog/category/subcategory/category/FURNITURE/subcat/LIVING ROOM">
+<a href="/pgcatalog/category/subcategory/category/FURNITURE/subcat/OFFICE">
+<a href="/pgcatalog/category/subcategory/category/FURNITURE/subcat/OTHER FURNITURE">
+<a href="/pgcatalog/category/subcategory/category/FURNITURE/subcat/PLASTIC FURNITURE">
+<a href="/pgcatalog/category/subcategory/category/FURNITURE/subcat/SMALL FURNITURE">

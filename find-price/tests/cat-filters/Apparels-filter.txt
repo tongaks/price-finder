@@ -1,0 +1,6 @@
+<a href="/pgcatalog/category/subcategory/category/APPARELS/subcat/BOYS">
+<a href="/pgcatalog/category/subcategory/category/APPARELS/subcat/GIRLS">
+<a href="/pgcatalog/category/subcategory/category/APPARELS/subcat/LADIES">
+<a href="/pgcatalog/category/subcategory/category/APPARELS/subcat/MEN"S">
+<a href="/pgcatalog/category/subcategory/category/APPARELS/subcat/TEENS LADIES">
+<a href="/pgcatalog/category/subcategory/category/APPARELS/subcat/TEENS MEN"S">

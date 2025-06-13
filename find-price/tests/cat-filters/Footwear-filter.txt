@@ -1,0 +1,7 @@
+<a href="/pgcatalog/category/subcategory/category/FOOTWEAR/subcat/BOYS" FOOTWEAR">
+<a href="/pgcatalog/category/subcategory/category/FOOTWEAR/subcat/GIRLS" FOOTWEAR">
+<a href="/pgcatalog/category/subcategory/category/FOOTWEAR/subcat/HOSIERY">
+<a href="/pgcatalog/category/subcategory/category/FOOTWEAR/subcat/INFANTS">
+<a href="/pgcatalog/category/subcategory/category/FOOTWEAR/subcat/LADIES" FOOTWEAR">
+<a href="/pgcatalog/category/subcategory/category/FOOTWEAR/subcat/MEN"S FOOTWEAR">
+<a href="/pgcatalog/category/subcategory/category/FOOTWEAR/subcat/SOCKS">
